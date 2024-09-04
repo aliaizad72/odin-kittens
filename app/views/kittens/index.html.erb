@@ -1,4 +1,5 @@
 
+<%= link_to "Add Your Kitten", new_kitten_path %>
 <h3>Kittens list:</h3>
 <% @kittens.each do |kitten| %>
   <a class="header-links" href=<%= "/kittens/#{kitten.id}" %>><h4><%= kitten.name %></h4></a>
