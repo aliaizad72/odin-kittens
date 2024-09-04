@@ -19,6 +19,9 @@
 
   <body>
     <h1><%= link_to "Kittens", root_path, class: "header-links" %></h1>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, class: name %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

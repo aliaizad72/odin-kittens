@@ -1,11 +1,11 @@
-
 <%= link_to "Add Your Kitten", new_kitten_path %>
 <h3>Kittens list:</h3>
 <% @kittens.each do |kitten| %>
-  <a class="header-links" href=<%= "/kittens/#{kitten.id}" %>><h4><%= kitten.name %></h4></a>
+  <a class="header-links" href=<%= kitten_path(kitten) %>><h4><%= kitten.name %></h4></a>
   <ul>
     <li>Age: <%= kitten.age %></li>
     <li>Cuteness: <%= kitten.cuteness %></li>
     <li>Softness: <%= kitten.softness %></li>
   </ul>
+  <%= link_to "Edit", edit_kitten_path(kitten) %>
 <% end %>
